@@ -1,0 +1,28 @@
+.pokecard {
+    background-color: white;
+    padding: 8px;
+    margin: 12px;
+    height: 250px;
+    width: 300px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+    img {
+        width: 60%;
+        max-height: 70%;
+    }
+    &:hover {
+        transform: scale(1.1);
+        filter: brightness(1.15);
+    }
+}
+
+.pokename {
+    font-size: 32px;
+    font-weight: 400;
+    color: white;
+}

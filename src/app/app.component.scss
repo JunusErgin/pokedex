@@ -1,0 +1,22 @@
+.main-background {
+    background-color: rgba(0, 0, 0, 0.05);
+    min-height: 100vh;
+}
+
+header {
+    height: 80px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 100px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    img {
+        height: 48px;
+    }
+}
+
+.pokecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
