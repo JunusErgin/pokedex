@@ -10,15 +10,22 @@
     justify-content: space-between;
     flex-direction: column;
     cursor: pointer;
-    transition: all 125ms ease-in-out;
+    //transition: all 125ms ease-in-out;
     img {
         width: 60%;
         max-height: 70%;
     }
     &:hover {
-        transform: scale(1.1);
+        // transform: scale(1.1);
         filter: brightness(1.15);
     }
+}
+
+.pokecard-copy {
+    display: none;
+    position: absolute;
+    transition: all 2250ms ease-in-out;
+    z-index: 10;
 }
 
 .pokename {

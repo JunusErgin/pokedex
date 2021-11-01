@@ -1,4 +1,10 @@
-<div class="pokecard" [style.background-color]="bgColor">
+<div class="pokecard" (click)="open()" [style.background-color]="bgColor" #pokemonCard>
+    <div class="pokename">{{ pokemon.name }}</div>
+
+    <img [src]="pokemonInfo?.sprites?.other?.dream_world?.front_default">
+</div>
+
+<div class="pokecard pokecard-copy" [style.left]="position.left" [style.top]="position.top" [style.background-color]="bgColor" #pokemonCardCopy>
     <div class="pokename">{{ pokemon.name }}</div>
 
     <img [src]="pokemonInfo?.sprites?.other?.dream_world?.front_default">
