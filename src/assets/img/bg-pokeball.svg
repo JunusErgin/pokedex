@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="106.86324mm"
+   height="107.34538mm"
+   viewBox="0 0 106.86324 107.34538"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="bg-pokeball.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-186.30153"
+     inkscape:cy="242.93299"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="716"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-51.568429,-94.827285)">
+    <g
+       id="g827">
+      <path
+         id="path815"
+         transform="scale(0.26458333)"
+         d="M 396.84961,358.40234 A 202.85714,202.85714 0 0 0 194.9668,543.07617 h 120.20312 a 83.744749,83.744749 0 0 1 81.67969,-65.56055 83.744749,83.744749 0 0 1 81.64062,65.56055 H 598.79688 A 202.85714,202.85714 0 0 0 396.84961,358.40234 Z M 194.9043,579.44336 A 202.85714,202.85714 0 0 0 396.84961,764.11719 202.85714,202.85714 0 0 0 598.73438,579.44336 H 478.53125 a 83.744749,83.744749 0 0 1 -81.68164,65.56055 83.744749,83.744749 0 0 1 -81.63867,-65.56055 z"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.99999994"
+         inkscape:connector-curvature="0" />
+      <circle
+         r="13.363476"
+         cy="148.5"
+         cx="105"
+         id="path823"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.26998299" />
+    </g>
+  </g>
+</svg>

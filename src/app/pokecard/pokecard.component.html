@@ -1,11 +1,26 @@
 <div class="pokecard" (click)="open()" [style.background-color]="bgColor" #pokemonCard>
     <div class="pokename">{{ pokemon.name }}</div>
+    <span class="type" *ngIf="getFirstType()">{{ getFirstType() }}</span>
 
-    <img [src]="pokemonInfo?.sprites?.other?.dream_world?.front_default">
+    <img src="./assets/img/bg-pokeball.svg" class="pokeball-image">
+    <img class="pokemon-image" [src]="pokemonInfo?.sprites?.other?.dream_world?.front_default">
+</div>
+
+
+<div class="layer-between" *ngIf="pokemonIsOpen" (click)="closeCard()">
+
 </div>
 
 <div class="pokecard pokecard-copy" [style.left]="position.left" [style.top]="position.top" [style.background-color]="bgColor" #pokemonCardCopy>
     <div class="pokename">{{ pokemon.name }}</div>
+    <span class="type" *ngIf="getFirstType()">{{ getFirstType() }}</span>
 
-    <img [src]="pokemonInfo?.sprites?.other?.dream_world?.front_default">
+    <div class="background-card" [style.height]="pokemonIsOpen ? '80%' : '0%'">
+
+    </div>
+
+
+    <img src="./assets/img/bg-pokeball.svg" class="pokeball-image">
+    <img class="pokemon-image" [src]="pokemonInfo?.sprites?.other?.dream_world?.front_default">
+
 </div>
