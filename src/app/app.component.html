@@ -1,11 +1,17 @@
 <div class="main-background">
     <header>
         <img src="/assets/img/logo.png">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Pokemon suchen...</mat-label>
+            <input [formControl]="query" matInput placeholder="Namen eingeben...">
+        </mat-form-field>
+
+        <img style="opacity: 0;" src="/assets/img/logo.png">
     </header>
 
     <div class="pokecontainer">
-        <app-pokecard *ngFor="let pokemon of pokemonList" [pokemon]="pokemon">
-
+        <app-pokecard *ngFor="let pokemon of pokemonListFiltered" [pokemon]="pokemon">
         </app-pokecard>
     </div>
 

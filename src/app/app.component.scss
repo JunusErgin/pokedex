@@ -10,6 +10,7 @@ header {
     display: flex;
     align-items: center;
     background-color: white;
+    justify-content: space-between;
     img {
         height: 48px;
     }
@@ -19,4 +20,12 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.mat-form-field {
+    width: 300px;
+}
+
+.mat-form-field-wrapper {
+    padding-bottom: 0 !important;
 }
