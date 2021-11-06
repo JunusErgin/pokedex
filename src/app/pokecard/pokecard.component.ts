@@ -26,7 +26,7 @@ export class PokecardComponent implements OnInit, AfterViewInit {
   @ViewChild('pokeType') pokeType: ElementRef;
   @ViewChild('pokeBackgroundCard') pokeBackgroundCard: ElementRef;
   position = { left: 0, top: 0 };
-  constructor() { }
+  constructor() {}
 
   async ngOnInit() {
     // console.log('Pokemon is', this.pokemon);
@@ -40,9 +40,9 @@ export class PokecardComponent implements OnInit, AfterViewInit {
     this.updateCardPosition();
   }
 
-  @HostListener('window:scroll', ['$event']) 
-  updateCardPosition(){
-    if(!this.pokemonIsOpen) {
+  @HostListener('window:scroll', ['$event'])
+  updateCardPosition() {
+    if (!this.pokemonIsOpen) {
       this.position = this.pokemonCard.nativeElement.getBoundingClientRect();
       const left = this.position.left - 12;
       const top = this.position.top - 12;
@@ -50,16 +50,13 @@ export class PokecardComponent implements OnInit, AfterViewInit {
     }
   }
 
-  ngAfterViewInit() { }
-
+  ngAfterViewInit() {}
 
   getFirstType() {
     let type = '';
     try {
-      type = this.pokemonInfo['types'][0].type['name']
-    } catch (e) {
-
-    }
+      type = this.pokemonInfo['types'][0].type['name'];
+    } catch (e) {}
 
     return type;
   }
@@ -71,32 +68,54 @@ export class PokecardComponent implements OnInit, AfterViewInit {
     this.pokemonCardCopy.nativeElement.style.backgroundColor = this.bgColor;
     this.pokemonIsOpen = true;
     setTimeout(() => {
-      this.pokemonCardCopy.nativeElement.style.width = '35%';
-      this.pokemonCardCopy.nativeElement.style.top = '24px';
-      this.pokemonCardCopy.nativeElement.style.left = '50%';
-      this.pokemonCardCopy.nativeElement.style.right = '15%';
-      this.pokemonCardCopy.nativeElement.style.height = '90vh';
-      this.pokeType.nativeElement.style.top = '10%';
-      this.pokeBackgroundCard.nativeElement.style.height = '80%';
+      if (window.innerWidth < 1000) {
+        this.openMobileView();
+      } else {
+        this.openDesktopView();
+      }
     }, 10);
+  }
 
+  openMobileView() {
+    this.pokemonCardCopy.nativeElement.style.width = 'calc(80% - 40px)';
+    this.pokemonCardCopy.nativeElement.style.top = '24px';
+    this.pokemonCardCopy.nativeElement.style.left = '10%';
+    this.pokemonCardCopy.nativeElement.style.right = '10%';
+    this.pokemonCardCopy.nativeElement.style.height = '90vh';
+    this.pokeType.nativeElement.style.top = '10%';
+    this.pokeBackgroundCard.nativeElement.style.height = '80%';
+  }
+
+  openDesktopView() {
+    this.pokemonCardCopy.nativeElement.style.width = '35%';
+    this.pokemonCardCopy.nativeElement.style.top = '24px';
+    this.pokemonCardCopy.nativeElement.style.left = '50%';
+    this.pokemonCardCopy.nativeElement.style.right = '15%';
+    this.pokemonCardCopy.nativeElement.style.height = '90vh';
+    this.pokeType.nativeElement.style.top = '10%';
+    this.pokeBackgroundCard.nativeElement.style.height = '80%';
   }
 
   closeCard() {
     this.pokemonIsOpen = false;
     //console.log('Closing', this.position);
-    this.pokemonCardCopy.nativeElement.style.width = this.position['width'] - 12 + 'px';
-    this.pokemonCardCopy.nativeElement.style.top = this.position.top - 12 + 'px';
-    this.pokemonCardCopy.nativeElement.style.left = this.position.left - 12 + 'px';
-    this.pokemonCardCopy.nativeElement.style.right = this.position['right'] - 12 + 'px';
-    this.pokemonCardCopy.nativeElement.style.height = this.position['height'] - 12 + 'px';
+    this.pokemonCardCopy.nativeElement.style.width =
+      this.position['width'] - 12 + 'px';
+    this.pokemonCardCopy.nativeElement.style.top =
+      this.position.top - 12 + 'px';
+    this.pokemonCardCopy.nativeElement.style.left =
+      this.position.left - 12 + 'px';
+    this.pokemonCardCopy.nativeElement.style.right =
+      this.position['right'] - 12 + 'px';
+    this.pokemonCardCopy.nativeElement.style.height =
+      this.position['height'] - 12 + 'px';
     this.pokeType.nativeElement.style.top = '25%';
     this.pokeBackgroundCard.nativeElement.style.height = '0%';
 
     setTimeout(() => {
       this.pokemonCard.nativeElement.style.opacity = '1';
       this.pokemonCardCopy.nativeElement.style.display = 'none';
-    }, 2251);
+    }, 225);
   }
 
   getColorByType(type) {
