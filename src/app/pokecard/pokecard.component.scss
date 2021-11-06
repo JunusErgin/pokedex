@@ -28,7 +28,7 @@
 
 .pokecard-copy {
     display: none;
-    position: absolute;
+    position: fixed;
     transition: all 2250ms ease-in-out;
     z-index: 10;
 }

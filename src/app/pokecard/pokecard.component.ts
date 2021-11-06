@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   Input,
   OnInit,
   ViewChild,
@@ -36,9 +37,17 @@ export class PokecardComponent implements OnInit, AfterViewInit {
     let type = this.pokemonInfo.types[0]['type']['name'];
     // console.log(type);
     this.bgColor = this.getColorByType(type);
+    this.updateCardPosition();
+  }
 
-    this.position = this.pokemonCard.nativeElement.getBoundingClientRect();
-    this.pokemonCardCopy.nativeElement.style = `left: ${this.position.left - 12}px; top: ${this.position.top - 12}px;`;
+  @HostListener('window:scroll', ['$event']) 
+  updateCardPosition(){
+    if(!this.pokemonIsOpen) {
+      this.position = this.pokemonCard.nativeElement.getBoundingClientRect();
+      const left = this.position.left - 12;
+      const top = this.position.top - 12;
+      this.pokemonCardCopy.nativeElement.style = `left: ${left}px; top: ${top}px;`;
+    }
   }
 
   ngAfterViewInit() { }
@@ -87,7 +96,7 @@ export class PokecardComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.pokemonCard.nativeElement.style.opacity = '1';
       this.pokemonCardCopy.nativeElement.style.display = 'none';
-    }, 5000);
+    }, 2251);
   }
 
   getColorByType(type) {
