@@ -10,7 +10,7 @@ import { FormControl } from '@angular/forms';
 export class AppComponent implements OnInit {
   pokemonList = [];
   pokemonListFiltered = [];
-  pokemonAmount = 151;
+  pokemonAmount = 6;
   query = new FormControl();
 
   async ngOnInit() {

@@ -16,7 +16,7 @@
     <span #pokeType class="type" *ngIf="getFirstType()">{{ getFirstType() }}</span>
 
     <div class="background-card" #pokeBackgroundCard>
-        <app-poke-stats></app-poke-stats>
+        <app-poke-stats *ngIf="pokemon" [pokemonInfo]="pokemonInfo"></app-poke-stats>
     </div>
 
 

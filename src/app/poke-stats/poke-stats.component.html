@@ -1,4 +1,51 @@
 <mat-tab-group>
-    <mat-tab label="First"> About </mat-tab>
-    <mat-tab label="Second"> Base stats </mat-tab>
+    <mat-tab label="About">
+        <table>
+            <!-- <tr>
+                <td>Species</td>
+                <td></td>
+            </tr> -->
+
+            <tr>
+                <td>Height</td>
+                <td>{{ pokemonInfo['height'] }}</td>
+            </tr>
+
+            <tr>
+                <td>Weight</td>
+                <td>{{ pokemonInfo['weight'] }}</td>
+            </tr>
+
+            <!-- <tr>
+                <td>Abilities</td>
+                <td></td>
+            </tr> -->
+
+        </table>
+    </mat-tab>
+    <mat-tab label="Base stats {{ pokemonInfo['stats']?.length }}">
+        <table>
+            <tr *ngFor="let stat of pokemonInfo['stats']">
+                <td>{{ stat['stat']['name'] }}</td>
+                <td>{{ stat['base_stat'] }}</td>
+            </tr>
+            <!-- <tr>
+                <td>Attack</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Defense</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Sp. Atk</td>
+                <td>Sp. Def</td>
+            </tr>
+            <tr>
+                <td>Speed</td>
+                <td>Total</td>
+            </tr> -->
+        </table>
+
+    </mat-tab>
 </mat-tab-group>
