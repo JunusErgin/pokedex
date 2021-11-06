@@ -13,10 +13,10 @@
 
 <div class="pokecard pokecard-copy" [style.left]="position.left" [style.top]="position.top" [style.background-color]="bgColor" #pokemonCardCopy>
     <div class="pokename">{{ pokemon.name }}</div>
-    <span class="type" *ngIf="getFirstType()">{{ getFirstType() }}</span>
+    <span #pokeType class="type" *ngIf="getFirstType()">{{ getFirstType() }}</span>
 
-    <div class="background-card" [style.height]="pokemonIsOpen ? '80%' : '0%'">
-
+    <div class="background-card" #pokeBackgroundCard>
+        <app-poke-stats></app-poke-stats>
     </div>
 
 

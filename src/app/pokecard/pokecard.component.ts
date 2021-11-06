@@ -22,6 +22,8 @@ export class PokecardComponent implements OnInit, AfterViewInit {
   bgColor = '#94C9AD';
   @ViewChild('pokemonCard') pokemonCard: ElementRef;
   @ViewChild('pokemonCardCopy') pokemonCardCopy: ElementRef;
+  @ViewChild('pokeType') pokeType: ElementRef;
+  @ViewChild('pokeBackgroundCard') pokeBackgroundCard: ElementRef;
   position = { left: 0, top: 0 };
   constructor() { }
 
@@ -54,6 +56,8 @@ export class PokecardComponent implements OnInit, AfterViewInit {
   }
   open() {
     //console.log('open');
+    this.pokeBackgroundCard.nativeElement.style.height = '0%';
+    this.pokemonCard.nativeElement.style.opacity = '0';
     this.pokemonCardCopy.nativeElement.style.display = 'flex';
     this.pokemonCardCopy.nativeElement.style.backgroundColor = this.bgColor;
     this.pokemonIsOpen = true;
@@ -63,6 +67,8 @@ export class PokecardComponent implements OnInit, AfterViewInit {
       this.pokemonCardCopy.nativeElement.style.left = '50%';
       this.pokemonCardCopy.nativeElement.style.right = '15%';
       this.pokemonCardCopy.nativeElement.style.height = '90vh';
+      this.pokeType.nativeElement.style.top = '10%';
+      this.pokeBackgroundCard.nativeElement.style.height = '80%';
     }, 10);
 
   }
@@ -75,8 +81,11 @@ export class PokecardComponent implements OnInit, AfterViewInit {
     this.pokemonCardCopy.nativeElement.style.left = this.position.left - 12 + 'px';
     this.pokemonCardCopy.nativeElement.style.right = this.position['right'] - 12 + 'px';
     this.pokemonCardCopy.nativeElement.style.height = this.position['height'] - 12 + 'px';
+    this.pokeType.nativeElement.style.top = '25%';
+    this.pokeBackgroundCard.nativeElement.style.height = '0%';
 
     setTimeout(() => {
+      this.pokemonCard.nativeElement.style.opacity = '1';
       this.pokemonCardCopy.nativeElement.style.display = 'none';
     }, 5000);
   }
