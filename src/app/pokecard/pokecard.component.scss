@@ -14,9 +14,9 @@
     overflow: hidden;
     //transition: all 125ms ease-in-out;
     .pokemon-image {
-        width: 60%;
+        width: 50%;
         position: absolute;
-        max-height: 60%;
+        max-height: 50%;
         right: 8px;
         bottom: 8px;
     }
@@ -90,4 +90,10 @@
     height: 0%;
     overflow: hidden;
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+}
+
+.close-btn {
+    position: absolute;
+    left: 0;
+    color: white;
 }

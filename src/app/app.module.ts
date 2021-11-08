@@ -10,6 +10,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PokeStatsComponent } from './poke-stats/poke-stats.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [AppComponent, PokecardComponent, PokeStatsComponent],
@@ -21,6 +23,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatTabsModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -61,6 +61,7 @@ export class PokecardComponent implements OnInit, AfterViewInit {
     return type;
   }
   open() {
+    this.updateCardPosition();
     //console.log('open');
     this.pokeBackgroundCard.nativeElement.style.height = '0%';
     this.pokemonCard.nativeElement.style.opacity = '0';
@@ -77,13 +78,18 @@ export class PokecardComponent implements OnInit, AfterViewInit {
   }
 
   openMobileView() {
-    this.pokemonCardCopy.nativeElement.style.width = 'calc(80% - 40px)';
-    this.pokemonCardCopy.nativeElement.style.top = '24px';
-    this.pokemonCardCopy.nativeElement.style.left = '10%';
-    this.pokemonCardCopy.nativeElement.style.right = '10%';
-    this.pokemonCardCopy.nativeElement.style.height = '90vh';
-    this.pokeType.nativeElement.style.top = '10%';
+    this.pokemonCardCopy.nativeElement.style.width = '100%';
+    this.pokemonCardCopy.nativeElement.style.top = '0px';
+    this.pokemonCardCopy.nativeElement.style.left = '0%';
+    this.pokemonCardCopy.nativeElement.style.right = '0%';
+    this.pokemonCardCopy.nativeElement.style.height = '100vh';
+    this.pokemonCardCopy.nativeElement.style.margin = '0';
+    this.pokemonCardCopy.nativeElement.style.margin = '0';
+    this.pokemonCardCopy.nativeElement.style.borderRadius = '0';
+
     this.pokeBackgroundCard.nativeElement.style.height = '80%';
+
+    this.pokeType.nativeElement.style.top = '10%';
   }
 
   openDesktopView() {
@@ -111,6 +117,9 @@ export class PokecardComponent implements OnInit, AfterViewInit {
       this.position['height'] - 12 + 'px';
     this.pokeType.nativeElement.style.top = '25%';
     this.pokeBackgroundCard.nativeElement.style.height = '0%';
+    this.pokeBackgroundCard.nativeElement.style.margin = '12px';
+    this.pokemonCardCopy.nativeElement.style.borderRadius = '8px';
+
 
     setTimeout(() => {
       this.pokemonCard.nativeElement.style.opacity = '1';

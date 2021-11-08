@@ -12,15 +12,20 @@
 </div>
 
 <div class="pokecard pokecard-copy" [style.left]="position.left" [style.top]="position.top" [style.background-color]="bgColor" #pokemonCardCopy>
-    <div class="pokename">{{ pokemon.name }}</div>
-    <span #pokeType class="type" *ngIf="getFirstType()">{{ getFirstType() }}</span>
 
-    <div class="background-card" #pokeBackgroundCard>
-        <app-poke-stats *ngIf="pokemon" [pokemonInfo]="pokemonInfo"></app-poke-stats>
+    <button (click)="closeCard()" class="close-btn" mat-icon-button>
+        <mat-icon>arrow_back_ios_new</mat-icon>
+      </button>
+
+    <div class="pokename ">{{ pokemon.name }}</div>
+    <span #pokeType class="type " *ngIf="getFirstType() ">{{ getFirstType() }}</span>
+
+    <div class="background-card " #pokeBackgroundCard>
+        <app-poke-stats *ngIf="pokemon " [pokemonInfo]="pokemonInfo "></app-poke-stats>
     </div>
 
 
-    <img src="./assets/img/bg-pokeball.svg" class="pokeball-image">
-    <img class="pokemon-image" [src]="pokemonInfo?.sprites?.other?.dream_world?.front_default">
+    <img src="./assets/img/bg-pokeball.svg " class="pokeball-image ">
+    <img class="pokemon-image " [src]="pokemonInfo?.sprites?.other?.dream_world?.front_default ">
 
 </div>
