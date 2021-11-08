@@ -5,6 +5,10 @@
         <mat-form-field appearance="outline">
             <mat-label>Pokemon suchen...</mat-label>
             <input [formControl]="query" matInput placeholder="Namen eingeben...">
+
+            <button *ngIf="(query.valueChanges | async)" matSuffix mat-icon-button aria-label="Clear" (click)="query.setValue('')">
+                <mat-icon>close</mat-icon>
+              </button>
         </mat-form-field>
 
         <img style="opacity: 0;" src="/assets/img/logo.png">
